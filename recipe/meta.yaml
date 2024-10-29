@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/cylp-{{ version }}.tar.gz
-  sha256: 9c4f686964a577558b5c7f637d19657e6364826c22c5cc3fe1d7bebb61961bd6
+  sha256: d68ab1dde125be60abf45c8fd9edd24ab880c8144ad881718ddfa01ff6674c77
 
 build:
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation

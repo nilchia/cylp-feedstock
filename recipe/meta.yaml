@@ -20,7 +20,7 @@ requirements:
     - {{ compiler('cxx') }}
     - {{ stdlib('c') }}
   host:
-    - python <3.12
+    - python
     - setuptools
     - cython <3
     - numpy <2.0.0
@@ -33,7 +33,7 @@ requirements:
     - coin-or-cgl
     - coin-or-cbc
   run:
-    - python <3.12
+    - python
     - numpy >=1.5.0,<2.0.0
     - scipy >=0.10.0
     - hypothesis

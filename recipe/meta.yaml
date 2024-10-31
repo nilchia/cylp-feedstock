@@ -1,5 +1,5 @@
 {% set name = "cylp" %}
-{% set version = "0.91.5" %}
+{% set version = "0.91.6" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/cylp-{{ version }}.tar.gz
-  sha256: d68ab1dde125be60abf45c8fd9edd24ab880c8144ad881718ddfa01ff6674c77
+  sha256: f026abc29c67a998264db8aa9653fc98c0c38661da68f80ef4b6a0edc117bec0
 
 build:
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
@@ -20,9 +20,9 @@ requirements:
     - {{ compiler('cxx') }}
     - {{ stdlib('c') }}
   host:
-    - python
+    - python <3.12
     - setuptools
-    - cython
+    - cython <3
     - numpy <2.0.0
     - hypothesis
     - pip
@@ -33,7 +33,7 @@ requirements:
     - coin-or-cgl
     - coin-or-cbc
   run:
-    - python
+    - python <3.12
     - numpy >=1.5.0,<2.0.0
     - scipy >=0.10.0
     - hypothesis
